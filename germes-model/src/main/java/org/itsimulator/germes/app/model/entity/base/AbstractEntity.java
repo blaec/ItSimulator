@@ -92,7 +92,9 @@ public abstract class AbstractEntity {
 		if (getClass() != obj.getClass())
 			return false;
 		AbstractEntity other = (AbstractEntity) obj;
-		return  id == other.id;
+		if (id != other.id)
+			return false;
+		return true;
 	}
 	
 }

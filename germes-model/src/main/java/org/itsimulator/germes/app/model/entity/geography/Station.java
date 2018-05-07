@@ -5,7 +5,7 @@ import org.itsimulator.germes.app.model.entity.transport.TransportType;
 
 /**
  * Station where passengers can get off or take specific kind
- * of transport. Multiple stations compose route of the trip.
+ * of transport. Multiple stationts compose route of the trip.  
  * @author admin
  *
  */

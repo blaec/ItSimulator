@@ -1,11 +1,7 @@
-.idea
-.idea_modules
-idea.bat
-out
-target
-*.iml
-log
-*.patch
 .settings
-.gitkeep
+.springBeans
+bin
+target/
+.classpath
 .project
+.log
