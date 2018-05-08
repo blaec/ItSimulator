@@ -1,5 +1,7 @@
 package org.itsimulator.germes.app.model.search.criteria;
 
+import java.util.Objects;
+
 import org.itsimulator.germes.app.model.entity.transport.TransportType;
 
 /**
@@ -34,11 +36,11 @@ public class StationCriteria {
 	}
 
 	private StationCriteria(final String name) {
-		this.name = name;
+		this.name = Objects.requireNonNull(name);
 	}
 	
 	public StationCriteria(final TransportType transportType) {
-		this.transportType = transportType;
+		this.transportType = Objects.requireNonNull(transportType);
 	}
 	
 	public String getName() {
