@@ -23,4 +23,6 @@ public interface GeographicService {
 	 * @param city
 	 */
 	void saveCity(City city);
+	
+
 }
