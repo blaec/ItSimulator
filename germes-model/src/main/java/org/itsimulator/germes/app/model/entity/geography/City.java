@@ -29,7 +29,7 @@ public class City extends AbstractEntity {
 	
 	/**
 	 * Set of transport stations that is linked to this 
-	 * loyality
+	 * locality
 	 */
 	private Set<Station> stations;
 
@@ -71,7 +71,7 @@ public class City extends AbstractEntity {
 
 	/**
 	 * Adds specified station to the city station list
-	 * @param transportType
+	 * @param station
 	 */
 	public Station addStation(final TransportType transportType) {
 		if(stations == null) {
