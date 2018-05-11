@@ -57,8 +57,7 @@ public class CityResource extends BaseResource {
 	 * @return
 	 */
 	public List<CityDTO> findCities() {
-		return service.findCities().stream()
-				.map((city) -> transformer.transform(city, CityDTO.class))
+		return service.findCities().stream().map((city) -> transformer.transform(city, CityDTO.class))
 				.collect(Collectors.toList());
 	}
 
