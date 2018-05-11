@@ -1,0 +1,14 @@
+10:55:39.470 DEBUG - SimpleDTOTransformer.transform: CityDTO[name=Odessa,district=None,region=Od,id=1] entity
+10:55:39.472 DEBUG - SimpleDTOTransformer.transform: CityDTO[name=Odessa,district=None,region=Od,id=1] DTO object
+10:56:25.442 DEBUG - SimpleDTOTransformer.transform: CityDTO[name=Odessa,district=None,region=Od,id=1] entity
+10:56:25.443 DEBUG - SimpleDTOTransformer.transform: CityDTO[name=Odessa,district=None,region=Od,id=1] DTO object
+10:59:36.008 DEBUG - SimpleDTOTransformer.transform: CityDTO[name=Odessa,district=None,region=Od,id=1] entity
+10:59:36.008 DEBUG - SimpleDTOTransformer.transform: CityDTO[name=Odessa,district=None,region=Od,id=1] entity
+10:59:36.010 DEBUG - SimpleDTOTransformer.transform: CityDTO[name=Odessa,district=None,region=Od,id=1] DTO object
+10:59:36.010 DEBUG - SimpleDTOTransformer.transform: CityDTO[name=Odessa,district=None,region=Od,id=1] DTO object
+11:00:14.356 DEBUG - SimpleDTOTransformer.transform: CityDTO[name=Odessa,district=None,region=Od,id=1] entity
+11:00:14.358 DEBUG - SimpleDTOTransformer.transform: CityDTO[name=Odessa,district=None,region=Od,id=1] DTO object
+11:00:29.300 DEBUG - SimpleDTOTransformer.transform: CityDTO[name=Odessa,district=None,region=Od,id=1] entity
+11:00:29.301 DEBUG - SimpleDTOTransformer.transform: CityDTO[name=Odessa,district=None,region=Od,id=1] DTO object
+11:02:06.559 DEBUG - SimpleDTOTransformer.transform: CityDTO[name=Odessa,district=None,region=Od,id=1] entity
+11:02:06.561 DEBUG - SimpleDTOTransformer.transform: CityDTO[name=Odessa,district=None,region=Od,id=1] DTO object

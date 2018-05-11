@@ -3,6 +3,7 @@ package org.itsimulator.germes.app.service.transform.impl;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 import org.apache.commons.lang3.builder.ToStringStyle;
 import org.itsimulator.germes.app.infra.util.Checks;
+import org.itsimulator.germes.app.infra.util.CommonUtil;
 import org.itsimulator.germes.app.infra.util.ReflectionUtil;
 import org.itsimulator.germes.app.model.entity.base.AbstractEntity;
 import org.itsimulator.germes.app.rest.dto.base.BaseDTO;
@@ -33,8 +34,7 @@ public class SimpleDTOTransformer implements Transformer {
 
 		if (LOGGER.isDebugEnabled()) {
 			LOGGER.debug("SimpleDTOTransformer.transform: {} DTO object",
-					ReflectionToStringBuilder.toString(dto,
-							ToStringStyle.SHORT_PREFIX_STYLE));
+					CommonUtil.toString(dto));
 		}
 
 		return dto;
@@ -60,8 +60,7 @@ public class SimpleDTOTransformer implements Transformer {
 
 		if (LOGGER.isDebugEnabled()) {
 			LOGGER.debug("SimpleDTOTransformer.transform: {} entity",
-					ReflectionToStringBuilder.toString(entity,
-							ToStringStyle.SHORT_PREFIX_STYLE));
+					CommonUtil.toString(dto));
 		}
 
 		return entity;
