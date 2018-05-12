@@ -1,7 +1,10 @@
 .settings
+.gradle
 .springBeans
 bin
+gradle
 target/
+build/
 .classpath
 .project
 .log
