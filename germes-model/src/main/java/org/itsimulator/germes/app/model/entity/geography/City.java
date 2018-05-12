@@ -4,6 +4,9 @@ import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
 
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
 import org.itsimulator.germes.app.infra.util.CommonUtil;
 import org.itsimulator.germes.app.model.entity.base.AbstractEntity;
 import org.itsimulator.germes.app.model.entity.transport.TransportType;
@@ -13,6 +16,8 @@ import org.itsimulator.germes.app.model.entity.transport.TransportType;
  * @author Morenets
  *
  */
+@Table(name = "CITY")
+@Entity
 public class City extends AbstractEntity {	
 	private String name;
 	
