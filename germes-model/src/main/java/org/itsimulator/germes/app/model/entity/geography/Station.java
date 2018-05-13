@@ -54,6 +54,14 @@ public class Station extends AbstractEntity {
 	public City getCity() {
 		return city;
 	}
+	
+	public void setCity(City city) {
+		this.city = city;
+	}
+
+	public void setTransportType(TransportType transportType) {
+		this.transportType = transportType;
+	}
 
 	@Embedded	
 	public Address getAddress() {

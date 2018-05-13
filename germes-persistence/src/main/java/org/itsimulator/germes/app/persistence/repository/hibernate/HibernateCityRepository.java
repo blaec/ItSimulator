@@ -24,6 +24,10 @@ public class HibernateCityRepository implements CityRepository {
 	public void save(City city) {
 
 		try (Session session = sessionFactory.openSession()) {
+			city.prePersist();
+			if (city.getStations() != null) {
+				city.getStations().forEach(AbstractEntity::prePersist);
+			}
 			session.saveOrUpdate(city);
 		}
 	}

@@ -10,6 +10,7 @@ import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.MappedSuperclass;
 import javax.persistence.OneToOne;
+import javax.persistence.PrePersist;
 
 import org.itsimulator.germes.app.model.entity.person.Account;
 
@@ -76,7 +77,7 @@ public abstract class AbstractEntity {
 	}
 
 	@OneToOne(fetch = FetchType.LAZY, cascade = {})
-	@JoinColumn(name = "CREATED_BY", updatable = false)	
+	@JoinColumn(name = "CREATED_BY", updatable = false)
 	public Account getCreatedBy() {
 		return createdBy;
 	}
@@ -86,7 +87,7 @@ public abstract class AbstractEntity {
 	}
 
 	@OneToOne(fetch = FetchType.LAZY, cascade = {})
-	@JoinColumn(name = "MODIFIED_BY", insertable = false)	
+	@JoinColumn(name = "MODIFIED_BY", insertable = false)
 	public Account getModifiedBy() {
 		return modifiedBy;
 	}
@@ -95,6 +96,13 @@ public abstract class AbstractEntity {
 		this.modifiedBy = modifiedBy;
 	}
 
+	@PrePersist
+	public void prePersist() {
+		if (getId() == 0) {
+			setCreatedAt(LocalDateTime.now());
+		}		
+	}
+	
 	@Override
 	public int hashCode() {
 		final int prime = 31;

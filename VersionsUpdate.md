@@ -18,5 +18,6 @@
 | hibernate      |          | 5.1.0.Final | 027_082 |          |
 | hibernate-tools|          | 4.3.2.Final | 033_092 |          |
 | javax.inject   |          | 2.4.0-b31   | 034_094 |          |
+| h2             |          | 1.4.191     | 036_096 |          |
 
 (1) **commit 023_073**
