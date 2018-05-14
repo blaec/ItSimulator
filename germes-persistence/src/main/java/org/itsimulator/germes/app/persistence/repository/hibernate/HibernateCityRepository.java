@@ -10,6 +10,11 @@ import org.itsimulator.germes.app.model.entity.geography.City;
 import org.itsimulator.germes.app.persistence.hibernate.SessionFactoryBuilder;
 import org.itsimulator.germes.app.persistence.repository.CityRepository;
 
+/**
+ * Hibernate implementation of {@link CityRepository}
+ * @author Morenets
+ *
+ */
 public class HibernateCityRepository implements CityRepository {
 
 	private final SessionFactory sessionFactory;

@@ -32,7 +32,7 @@ public class CityResourceTest extends JerseyTest {
 	public void testFindCitiesSuccess() {
 		List<Map<String, String>> cities = target("cities").request().get(List.class);
 		assertNotNull(cities);
-		assertEquals(cities.size(), 1);
+		assertFalse(cities.isEmpty());
 
 		Map<String, String> city = cities.get(0);
 		assertEquals(city.get("name"), "Odessa");
@@ -48,7 +48,7 @@ public class CityResourceTest extends JerseyTest {
 
 	@Test
 	public void testFindCityByIdNotFound() {
-		Response response = target("cities/2").request().get(Response.class);
+		Response response = target("cities/200").request().get(Response.class);
 		assertNotNull(response);
 		assertEquals(response.getStatus(), Response.Status.NOT_FOUND.getStatusCode());
 	}
