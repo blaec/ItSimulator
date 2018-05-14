@@ -90,7 +90,7 @@ public class City extends AbstractEntity {
 	/**
 	 * Adds specified station to the city station list
 	 * 
-	 * @param transportType
+	 * @param station
 	 */
 	public Station addStation(final TransportType transportType) {
 		if (stations == null) {
