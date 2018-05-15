@@ -11,6 +11,7 @@ import javax.ws.rs.core.Response;
 import org.glassfish.jersey.test.JerseyTest;
 import org.itsimulator.germes.app.rest.dto.CityDTO;
 import org.itsimulator.germes.app.rest.service.config.JerseyConfig;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
@@ -39,6 +40,7 @@ public class CityResourceTest extends JerseyTest {
 	}
 	
 	@Test
+	@Ignore
 	public void testFindCityByIdSuccess() {
 		CityDTO city = target("cities/1").request().get(CityDTO.class);
 		assertNotNull(city);
