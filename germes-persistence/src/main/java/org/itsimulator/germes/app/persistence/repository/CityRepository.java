@@ -41,4 +41,10 @@ public interface CityRepository {
 	 */
 	void deleteAll();
 	
+	/**
+	 * Saves specified city instances
+	 * @param cities
+	 */
+	void saveAll(List<City> cities);
+	
 }
