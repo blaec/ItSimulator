@@ -28,5 +28,6 @@
 | javax.el-api           |          | 5.2.4.Final | 043_104 |          |
 | javax.el               |          | 2.2.4       | 043_104 |          |
 | hibernate-entitymanager|          | 5.1.0.Final | 044_105 |          |
+| mysql-connector-java   |          | 5.1.39      | 045_106 |          |
 
 (1) **commit 023_073**

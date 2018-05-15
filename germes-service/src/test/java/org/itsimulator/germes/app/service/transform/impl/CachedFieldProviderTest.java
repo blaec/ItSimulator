@@ -2,21 +2,17 @@ package org.itsimulator.germes.app.service.transform.impl;
 
 import org.itsimulator.germes.app.infra.util.ReflectionUtil;
 import org.junit.Before;
-import org.junit.BeforeClass;
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.powermock.api.mockito.PowerMockito;
-import org.powermock.core.classloader.annotations.PrepareForTest;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.*;
-import org.powermock.modules.junit4.PowerMockRunner;
 
 import mockit.Expectations;
 import mockit.Mock;
 import mockit.MockUp;
-import mockit.Mocked;
 import mockit.integration.junit4.JMockit;
 
 import java.util.Collections;

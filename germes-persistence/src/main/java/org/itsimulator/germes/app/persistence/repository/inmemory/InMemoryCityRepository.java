@@ -8,8 +8,9 @@ import org.itsimulator.germes.app.model.entity.geography.City;
 import org.itsimulator.germes.app.persistence.repository.CityRepository;
 
 /**
- * In-memory implementation of the {@link CityRepository} that stores
- * data in the RAM
+ * In-memory implementation of the {@link CityRepository} that stores data in
+ * the RAM
+ * 
  * @author Morenets
  *
  */
@@ -18,7 +19,7 @@ public class InMemoryCityRepository implements CityRepository {
 	 * Internal list of cities
 	 */
 	private final List<City> cities;
-	
+
 	/**
 	 * Auto-increment counter for entity id generation
 	 */
@@ -28,7 +29,7 @@ public class InMemoryCityRepository implements CityRepository {
 
 	public InMemoryCityRepository() {
 		cities = new ArrayList<City>();
-	}	
+	}
 
 	@Override
 	public void delete(final int cityId) {
@@ -38,7 +39,7 @@ public class InMemoryCityRepository implements CityRepository {
 	public List<City> findAll() {
 		return CommonUtil.getSafeList(cities);
 	}
-	
+
 	@Override
 	public void save(final City city) {
 		if (!cities.contains(city)) {
@@ -55,6 +56,6 @@ public class InMemoryCityRepository implements CityRepository {
 	@Override
 	public City findById(final int id) {
 		return cities.stream().filter(city -> city.getId() == id).findFirst().orElse(null);
-	}	
+	}
 
 }
