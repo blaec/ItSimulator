@@ -9,6 +9,7 @@ import javax.persistence.Enumerated;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
 import org.apache.commons.lang3.StringUtils;
@@ -17,37 +18,42 @@ import org.itsimulator.germes.app.model.entity.transport.TransportType;
 import org.itsimulator.germes.app.model.search.criteria.StationCriteria;
 
 /**
- * Station where passengers can get off or take specific kind
- * of transport. Multiple stationts compose route of the trip.  
+ * Station where passengers can get off or take specific kind of transport.
+ * Multiple stationts compose route of the trip.
+ * 
  * @author Morenets
  *
  */
 @Table(name = "STATION")
 @Entity
+@NamedQuery(name = Station.QUERY_DELETE_ALL, query = "delete from Station")
 public class Station extends AbstractEntity {
 	public static final String FIELD_TRANSPORT_TYPE = "transportType";
 
 	public static final String FIELD_CITY = "city";
-	
+
+	public static final String QUERY_DELETE_ALL = "deleteStations";
+
 	private City city;
-	
+
 	private Address address;
-	
+
 	/**
 	 * (Optional) Phone of the inquiry office
 	 */
 	private String phone;
-	
+
 	private Coordinate coordinate;
-	
+
 	private TransportType transportType;
-	
-	public Station() {		
+
+	public Station() {
 	}
-	
+
 	/**
-	 * You shouldn't create station object directly. Use
-	 * {@link City} functionality instead
+	 * You shouldn't create station object directly. Use {@link City}
+	 * functionality instead
+	 * 
 	 * @param city
 	 * @param transportType
 	 */
@@ -57,11 +63,11 @@ public class Station extends AbstractEntity {
 	}
 
 	@ManyToOne(cascade = {}, fetch = FetchType.EAGER)
-	@JoinColumn(name = "CITY_ID")	
+	@JoinColumn(name = "CITY_ID")
 	public City getCity() {
 		return city;
 	}
-	
+
 	public void setCity(City city) {
 		this.city = city;
 	}
@@ -70,7 +76,7 @@ public class Station extends AbstractEntity {
 		this.transportType = transportType;
 	}
 
-	@Embedded	
+	@Embedded
 	public Address getAddress() {
 		return address;
 	}
@@ -79,7 +85,7 @@ public class Station extends AbstractEntity {
 		this.address = address;
 	}
 
-	@Column(name = "PHONE", length=16)
+	@Column(name = "PHONE", length = 16)
 	public String getPhone() {
 		return phone;
 	}
@@ -98,31 +104,32 @@ public class Station extends AbstractEntity {
 	}
 
 	@Enumerated
-	@Column(nullable=false, name="TRANSPORT_TYPE")
+	@Column(nullable = false, name = "TRANSPORT_TYPE")
 	public TransportType getTransportType() {
 		return transportType;
 	}
-	
+
 	/**
 	 * Verifies if current station matches specified criteria
+	 * 
 	 * @param criteria
 	 * @return
 	 */
 	public boolean match(final StationCriteria criteria) {
 		Objects.requireNonNull(criteria, "Station criteria is not initialized");
-		
-		if(!StringUtils.isEmpty(criteria.getName())) {
-			if(!city.getName().equals(criteria.getName())) {
+
+		if (!StringUtils.isEmpty(criteria.getName())) {
+			if (!city.getName().equals(criteria.getName())) {
 				return false;
 			}
 		}
-		
-		if(criteria.getTransportType() != null) {
-			if(transportType != criteria.getTransportType()) {
+
+		if (criteria.getTransportType() != null) {
+			if (transportType != criteria.getTransportType()) {
 				return false;
 			}
 		}
-		
+
 		return true;
 	}
 
@@ -159,7 +166,5 @@ public class Station extends AbstractEntity {
 			return false;
 		return true;
 	}
-	
-	
 
 }
