@@ -48,7 +48,7 @@ public class CityResourceTest extends JerseyTest {
 
 	@Test
 	public void testFindCityByIdNotFound() {
-		Response response = target("cities/200").request().get(Response.class);
+		Response response = target("cities/20000").request().get(Response.class);
 		assertNotNull(response);
 		assertEquals(response.getStatus(), Response.Status.NOT_FOUND.getStatusCode());
 	}
@@ -70,4 +70,5 @@ public class CityResourceTest extends JerseyTest {
 		Response response = target("cities").request().post(Entity.entity(city, MediaType.APPLICATION_JSON));
 		assertEquals(response.getStatus(), Response.Status.NO_CONTENT.getStatusCode());
 	}	
+	
 }
