@@ -8,3 +8,4 @@ build/
 .classpath
 .project
 .log
+bower_components/
