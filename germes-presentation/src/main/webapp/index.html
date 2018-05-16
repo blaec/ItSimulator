@@ -6,6 +6,21 @@
 </head>
 <script src="bower_components/angular/angular.js"></script>
 <body>
-<div ng-bind="'Germes project'"></div>
+	<div ng-bind="'Germes project'"></div>
+
+	<div> Cities
+		<table style="width: 100%">
+			<tr>
+				<th>Name</th>
+				<th>District</th>
+				<th>Region</th>
+			</tr>
+			<tr ng-repeat="city in cities">
+				<td ng-bind="name"></td>
+				<td ng-bind="district"></td>
+				<td ng-bind="region"></td>
+			</tr>
+		</table>
+	</div>
 </body>
 </html>
