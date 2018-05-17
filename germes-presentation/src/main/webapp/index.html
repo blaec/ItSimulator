@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html ng-app="app">
 <head>
 <meta charset="UTF-8">
 <title>Germes project</title>
@@ -8,7 +8,7 @@
 <body>
 	<div ng-bind="'Germes project'"></div>
 
-	<div> Cities
+	<div ng-controller="CityCtrl"> Cities
 		<table style="width: 100%">
 			<tr>
 				<th>Name</th>
@@ -16,11 +16,13 @@
 				<th>Region</th>
 			</tr>
 			<tr ng-repeat="city in cities">
-				<td ng-bind="name"></td>
-				<td ng-bind="district"></td>
-				<td ng-bind="region"></td>
+				<td ng-bind="city.name"></td>
+				<td ng-bind="city.district"></td>
+				<td ng-bind="city.region"></td>
 			</tr>
 		</table>
 	</div>
+	<script src="app.js"></script>
+	<script src="controllers.js"></script>
 </body>
 </html>
